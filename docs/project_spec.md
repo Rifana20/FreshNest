@@ -1,10 +1,10 @@
-# Food Expiry Tracker + AI Recipe Suggestions
+# FreshNest - Smart Food & Medicine Inventory Assistant
 
 ## Problem Statement
 
-Many households waste food because they forget expiry dates or don't know how to use ingredients before they expire. This results in unnecessary food waste and financial loss.
+Many households waste food and medicines because they forget expiry dates or lose track of stored items. This results in unnecessary expenses, environmental impact, and poor inventory management.
 
-The Food Expiry Tracker helps users manage food inventory, track expiry dates, and receive AI-generated recipe suggestions using available ingredients.
+FreshNest helps users manage food and medicine inventories, monitor expiry dates, track consumption and waste, and receive AI-generated recipe suggestions using available ingredients.
 
 ---
 
@@ -13,73 +13,102 @@ The Food Expiry Tracker helps users manage food inventory, track expiry dates, a
 * Families
 * Students living in hostels
 * Working professionals
-* Small restaurants
 * Shared accommodations
+* Small restaurants
+* Elderly individuals managing medicines
 
 ---
 
 ## MVP Features
 
-### Feature 1: Food Inventory Management
+### Feature 1: Inventory Management
 
 Users can:
 
-* Add food items
-* Update food items
-* Delete food items
-* View all food items
+* Add items
+* Update items
+* Delete items
+* View all items
+
+Categories:
+
+* Pantry
+* Fridge
+* Freezer
+* Medicine
+
+---
 
 ### Feature 2: Expiry Tracking
 
-System automatically identifies:
+System automatically classifies items as:
 
-* Fresh items
-* Expiring soon items
-* Expired items
+* Fresh
+* Expiring Soon
+* Expired
 
-### Feature 3: AI Recipe Suggestions
+Based on expiry dates.
 
-Users can generate recipes using available ingredients before they expire.
+---
 
-### Feature 4: Authentication
+### Feature 3: Usage & Waste Tracking
+
+Users can mark items as:
+
+* Consumed / Used
+* Wasted / Thrown Away
+
+This helps analyze waste patterns.
+
+---
+
+### Feature 4: AI Recipe Suggestions
+
+Generate recipes using available ingredients.
+
+Priority is given to ingredients nearing expiry.
+
+---
+
+### Feature 5: Authentication
 
 Users can:
 
 * Register
 * Login
-* Access only their own food inventory
+* Access only their own inventory
 
 ---
 
 ## Tech Stack
 
-Backend:
+### Backend
 
 * Django
 * Django REST Framework
 
-Database:
+### Database
 
 * Supabase PostgreSQL
 
-Authentication:
+### Authentication
 
 * JWT Authentication
 
-AI:
+### AI
 
 * OpenAI GPT-4o or Claude
 
-Deployment:
+### Deployment
 
 * Railway
 
-Documentation:
+### Documentation
 
 * Swagger (drf-spectacular)
 * Postman
 
-Testing:
+### Testing
 
 * Pytest
 
@@ -89,16 +118,19 @@ Testing:
 
 ### User
 
-Fields:
+Fields
 
 * id
+* username
 * email
 * password
 * created_at
 
+---
+
 ### FoodItem
 
-Fields:
+Fields
 
 * id
 * user
@@ -107,11 +139,27 @@ Fields:
 * category
 * purchase_date
 * expiry_date
+* status
 * created_at
+
+Category Choices:
+
+* Pantry
+* Fridge
+* Freezer
+* Medicine
+
+Status Choices:
+
+* Active
+* Consumed
+* Wasted
+
+---
 
 ### RecipeSuggestion
 
-Fields:
+Fields
 
 * id
 * user
@@ -128,3 +176,15 @@ User
 ├── FoodItem (One-to-Many)
 │
 └── RecipeSuggestion (One-to-Many)
+
+---
+
+## Future Enhancements
+
+* Email expiry reminders
+* Medicine refill reminders
+* Barcode scanning
+* OCR receipt scanning
+* Nutrition analysis
+* Food waste reports
+* Mobile application
