@@ -1,6 +1,16 @@
-from django.urls import path
-from .views import FoodListCreateView
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+
+from .views import FoodViewSet
+
+router = DefaultRouter()
+
+router.register(
+    "",
+    FoodViewSet,
+    basename="foods"
+)
 
 urlpatterns = [
-    path("", FoodListCreateView.as_view()),
+    path("", include(router.urls)),
 ]

@@ -19,16 +19,15 @@ class RegisterUser(APIView):
 
             return Response({
                 "message": "User Registered",
-                "user_id": result.user.id
-            })
+                "user_id": result.user.id,
+                "email": result.user.email
+            }, status=status.HTTP_201_CREATED)
 
         except Exception as e:
             return Response({
-                     "message": "User Registered Successfully",
-                     "user_id": result.user.id,
-                    "email": result.user.email
-            }, status=status.HTTP_201_CREATED)
-
+                "message": "Registration failed",
+                "error": str(e)
+            }, status=status.HTTP_400_BAD_REQUEST)
 
 class LoginUser(APIView):
 

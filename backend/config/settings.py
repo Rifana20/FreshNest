@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'recipes',
 ]
 
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
