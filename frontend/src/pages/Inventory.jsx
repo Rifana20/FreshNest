@@ -14,12 +14,25 @@ function Inventory() {
     useState("All");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/foods/")
-      .then((response) => response.json())
-      .then((data) => {
-        setFoods(data);
-      });
-  }, []);
+
+  const token = localStorage.getItem("access_token");
+
+  if (!token) {
+    window.location.href = "/login";
+    return;
+  }
+
+  fetch("http://127.0.0.1:8000/api/foods/", {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      setFoods(data);
+    });
+
+}, []);
 
   const getImage = (name) => {
 
