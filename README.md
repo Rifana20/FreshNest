@@ -105,4 +105,6 @@ This helps monitor food waste and usage habits.
 
 ## Status
 
-Project Planning Phase
+✔ Feature 1: Completed  
+✔ Feature 2: Completed (CRUD API + Pagination + Filtering + Auth Integration)  
+⏳ Feature 3: In Progress 
