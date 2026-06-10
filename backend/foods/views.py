@@ -8,13 +8,33 @@ from .serializers import FoodItemSerializer
 class FoodViewSet(viewsets.ModelViewSet):
 
     serializer_class = FoodItemSerializer
-
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return FoodItem.objects.filter(
+
+        queryset = FoodItem.objects.filter(
             user=self.request.user
         )
+
+        category = self.request.query_params.get(
+            "category"
+        )
+
+        status = self.request.query_params.get(
+            "status"
+        )
+
+        if category:
+            queryset = queryset.filter(
+                category=category
+            )
+
+        if status:
+            queryset = queryset.filter(
+                status=status
+            )
+
+        return queryset
 
     def perform_create(self, serializer):
         serializer.save(

@@ -1,68 +1,75 @@
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import StatsCard from "../components/StatsCard";
+import API from "../services/api";
 
 function Dashboard() {
+
+  const [foods, setFoods] = useState([]);
+
+  useEffect(() => {
+
+    const token = localStorage.getItem(
+      "access_token"
+    );
+
+    API.get("/foods/", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then((res) => {
+        setFoods(res.data.results);
+      });
+
+  }, []);
+
+  const totalItems = foods.length;
+
+  const freshItems =
+    foods.filter(
+      item => item.status === "ACTIVE"
+    ).length;
+
+  const wastedItems =
+    foods.filter(
+      item => item.status === "WASTED"
+    ).length;
+
+  const consumedItems =
+    foods.filter(
+      item => item.status === "CONSUMED"
+    ).length;
+
   return (
     <>
       <Navbar />
 
       <div className="page-container">
 
-        <div className="dashboard-header">
-          <div>
-            <h1>FreshNest Dashboard</h1>
-            <p>
-              Track your food inventory, monitor expiry dates,
-              and reduce waste efficiently.
-            </p>
-          </div>
-        </div>
+        <h1>FreshNest Dashboard</h1>
 
         <div className="stats-container">
 
           <StatsCard
             title="Total Items"
-            value="42"
+            value={totalItems}
           />
 
           <StatsCard
-            title="Fresh Items"
-            value="31"
+            title="Active Items"
+            value={freshItems}
           />
 
           <StatsCard
-            title="Expiring Soon"
-            value="8"
+            title="Consumed"
+            value={consumedItems}
           />
 
           <StatsCard
-            title="Expired"
-            value="3"
+            title="Wasted"
+            value={wastedItems}
           />
-
-        </div>
-
-        <div className="dashboard-section">
-
-          <h2>Quick Summary</h2>
-
-          <div className="summary-card">
-            <p>
-              🥛 Milk expires tomorrow.
-            </p>
-
-            <p>
-              🥚 Eggs expire in 2 days.
-            </p>
-
-            <p>
-              🍞 Bread expires in 3 days.
-            </p>
-
-            <p>
-              💊 Vitamin Tablets have expired.
-            </p>
-          </div>
 
         </div>
 

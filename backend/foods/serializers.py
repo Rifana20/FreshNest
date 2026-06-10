@@ -4,7 +4,24 @@ from .models import FoodItem
 
 class FoodItemSerializer(serializers.ModelSerializer):
 
+    expiry_status = serializers.ReadOnlyField()
+
     class Meta:
         model = FoodItem
-        fields = "__all__"
-        read_only_fields = ["user"]
+
+        fields = [
+            "id",
+            "name",
+            "quantity",
+            "category",
+            "purchase_date",
+            "expiry_date",
+            "status",
+            "created_at",
+            "expiry_status"
+        ]
+
+        read_only_fields = [
+            "user",
+            "expiry_status"
+        ]

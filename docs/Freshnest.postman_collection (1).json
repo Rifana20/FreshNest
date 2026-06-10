@@ -1,0 +1,1168 @@
+{
+  "info": {
+    "_postman_id": "845ccbd6-f2f5-4b56-a14c-828934a0d6f3",
+    "name": "Freshnest",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55574075",
+    "_collection_link": "https://go.postman.co/collection/55574075-845ccbd6-f2f5-4b56-a14c-828934a0d6f3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "login-1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test1@gmail.com\",\n  \"password\": \"12345678\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "login",
+            ""
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test54@gmail.com\",\r\n    \"password\": \"Test123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/register/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "register",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test547@gmail.com\",\r\n    \"password\": \"Test123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/register/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "register",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test547@gmail.com\",\r\n    \"password\": \"Test123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login-1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200 or 201\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              "",
+              "pm.test(\"Response has message\", function () {",
+              "    pm.expect(pm.response.json()).to.have.property(\"message\");",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test1@gmail.com\",\n  \"password\": \"12345678\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createfood",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "createfood",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgwOTg5MzA2LCJpYXQiOjE3ODA5ODU3MDYsImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDcifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MDk4NTcwNn1dLCJzZXNzaW9uX2lkIjoiNzdkMWM4ODktNjc4NC00MTM5LTk0MWQtZDBmN2EzYWM2ZGFiIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.zkHrdnoowm3kJjdWqMuSyw7JwDAYEGmcigbjV675Xx9bC0xzPsPh6YA4XBqM_98Tp0r5I85wBuaeUR9iIhjaRw",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Rice\",\r\n    \"quantity\": \"2kg\",\r\n    \"category\": \"PANTRY\",\r\n    \"purchase_date\": \"2026-06-09\",\r\n    \"expiry_date\": \"2026-06-20\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getfood",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "getfood",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgwOTg5MzA2LCJpYXQiOjE3ODA5ODU3MDYsImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDcifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MDk4NTcwNn1dLCJzZXNzaW9uX2lkIjoiNzdkMWM4ODktNjc4NC00MTM5LTk0MWQtZDBmN2EzYWM2ZGFiIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.zkHrdnoowm3kJjdWqMuSyw7JwDAYEGmcigbjV675Xx9bC0xzPsPh6YA4XBqM_98Tp0r5I85wBuaeUR9iIhjaRw",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updatefood",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "updatefood",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgwOTg5MzA2LCJpYXQiOjE3ODA5ODU3MDYsImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDcifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MDk4NTcwNn1dLCJzZXNzaW9uX2lkIjoiNzdkMWM4ODktNjc4NC00MTM5LTk0MWQtZDBmN2EzYWM2ZGFiIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.zkHrdnoowm3kJjdWqMuSyw7JwDAYEGmcigbjV675Xx9bC0xzPsPh6YA4XBqM_98Tp0r5I85wBuaeUR9iIhjaRw",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Rice Bag\",\r\n    \"quantity\": \"5kg\",\r\n    \"category\": \"PANTRY\",\r\n    \"purchase_date\": \"2026-06-09\",\r\n    \"expiry_date\": \"2026-06-25\",\r\n    \"status\": \"ACTIVE\",\r\n    \"user\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/11/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            "11",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deletefood",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "deletefood",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgwOTg5MzA2LCJpYXQiOjE3ODA5ODU3MDYsImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDcifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MDk4NTcwNn1dLCJzZXNzaW9uX2lkIjoiNzdkMWM4ODktNjc4NC00MTM5LTk0MWQtZDBmN2EzYWM2ZGFiIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.zkHrdnoowm3kJjdWqMuSyw7JwDAYEGmcigbjV675Xx9bC0xzPsPh6YA4XBqM_98Tp0r5I85wBuaeUR9iIhjaRw",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/11/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            "11",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgwOTk0NjQwLCJpYXQiOjE3ODA5OTEwNDAsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgwOTkxMDQwfV0sInNlc3Npb25faWQiOiJlYzNkYjhhMi0xMzlmLTRmZWItYjEyMy1kOWE3ZjQ4M2ZkODMiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.fUwv6b36Yc5kSu5Tdybdj_dWO4YtA7NXF1TTLYeteoYPpKjUbjzpZLbvqwrni2ltQMOrlgZWoJldkfa3IEaD0Q",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/profile/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "profile",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "profile",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgwOTk0NjQwLCJpYXQiOjE3ODA5OTEwNDAsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgwOTkxMDQwfV0sInNlc3Npb25faWQiOiJlYzNkYjhhMi0xMzlmLTRmZWItYjEyMy1kOWE3ZjQ4M2ZkODMiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.fUwv6b36Yc5kSu5Tdybdj_dWO4YtA7NXF1TTLYeteoYPpKjUbjzpZLbvqwrni2ltQMOrlgZWoJldkfa3IEaD0Q",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/profile/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "profile",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is success\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"rida2008@gmail.com\",\r\n    \"password\": \"rida@1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "foood",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "patch",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "login-1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200 or 201\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              "",
+              "pm.test(\"Response has message\", function () {",
+              "    pm.expect(pm.response.json()).to.have.property(\"message\");",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"rida2008@gmail.com\",\n  \"password\": \"rida@1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/users/login/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "users",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "patch",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgxMDc5NDE1LCJpYXQiOjE3ODEwNzU4MTUsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgxMDc1ODE1fV0sInNlc3Npb25faWQiOiIzNTgwZjM5My0zNDMxLTQ0MWUtYmQxMy0zNDIxZmZlZjg3NzgiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.GrfGyRDwZ5O8rps-2l0VQwMyymlKlKzxa7t0ko9kAZ2FE1QvHK1Qj5VcGUPj1G9PUBiArlX5FDAZdD1Q2l3wkg",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/14/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            "14",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-two",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "create-two",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgxMDc5NDE1LCJpYXQiOjE3ODEwNzU4MTUsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgxMDc1ODE1fV0sInNlc3Npb25faWQiOiIzNTgwZjM5My0zNDMxLTQ0MWUtYmQxMy0zNDIxZmZlZjg3NzgiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.GrfGyRDwZ5O8rps-2l0VQwMyymlKlKzxa7t0ko9kAZ2FE1QvHK1Qj5VcGUPj1G9PUBiArlX5FDAZdD1Q2l3wkg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Milk\",\r\n  \"quantity\": \"1L\",\r\n  \"category\": \"FRIDGE\",\r\n  \"purchase_date\": \"2026-06-10\",\r\n  \"expiry_date\": \"2026-06-15\",\r\n  \"status\": \"ACTIVE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-food2",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "get-food2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgxMDc5NDE1LCJpYXQiOjE3ODEwNzU4MTUsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgxMDc1ODE1fV0sInNlc3Npb25faWQiOiIzNTgwZjM5My0zNDMxLTQ0MWUtYmQxMy0zNDIxZmZlZjg3NzgiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.GrfGyRDwZ5O8rps-2l0VQwMyymlKlKzxa7t0ko9kAZ2FE1QvHK1Qj5VcGUPj1G9PUBiArlX5FDAZdD1Q2l3wkg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filter",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "filter",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgxMDc5NDE1LCJpYXQiOjE3ODEwNzU4MTUsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgxMDc1ODE1fV0sInNlc3Npb25faWQiOiIzNTgwZjM5My0zNDMxLTQ0MWUtYmQxMy0zNDIxZmZlZjg3NzgiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.GrfGyRDwZ5O8rps-2l0VQwMyymlKlKzxa7t0ko9kAZ2FE1QvHK1Qj5VcGUPj1G9PUBiArlX5FDAZdD1Q2l3wkg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/?category=FRIDGE",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "FRIDGE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filter-2",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "filter-2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgxMDc5NDE1LCJpYXQiOjE3ODEwNzU4MTUsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgxMDc1ODE1fV0sInNlc3Npb25faWQiOiIzNTgwZjM5My0zNDMxLTQ0MWUtYmQxMy0zNDIxZmZlZjg3NzgiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.GrfGyRDwZ5O8rps-2l0VQwMyymlKlKzxa7t0ko9kAZ2FE1QvHK1Qj5VcGUPj1G9PUBiArlX5FDAZdD1Q2l3wkg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/?status=ACTIVE",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filter-3",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "filter-3",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgxMDc5NDE1LCJpYXQiOjE3ODEwNzU4MTUsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgxMDc1ODE1fV0sInNlc3Npb25faWQiOiIzNTgwZjM5My0zNDMxLTQ0MWUtYmQxMy0zNDIxZmZlZjg3NzgiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.GrfGyRDwZ5O8rps-2l0VQwMyymlKlKzxa7t0ko9kAZ2FE1QvHK1Qj5VcGUPj1G9PUBiArlX5FDAZdD1Q2l3wkg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/?category=FRIDGE&status=ACTIVE",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "FRIDGE"
+            },
+            {
+              "key": "status",
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-patch",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "delete-2",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "delete-2",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmN2YwOTMxYy1iOGQzLTQ4M2YtOTE4MS1hNzZmYTM0YzdlODIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgxMDc5NDE1LCJpYXQiOjE3ODEwNzU4MTUsImVtYWlsIjoicmlkYTIwMDhAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6InJpZGEyMDA4QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaG9uZV92ZXJpZmllZCI6ZmFsc2UsInN1YiI6ImY3ZjA5MzFjLWI4ZDMtNDgzZi05MTgxLWE3NmZhMzRjN2U4MiJ9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzgxMDc1ODE1fV0sInNlc3Npb25faWQiOiIzNTgwZjM5My0zNDMxLTQ0MWUtYmQxMy0zNDIxZmZlZjg3NzgiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.GrfGyRDwZ5O8rps-2l0VQwMyymlKlKzxa7t0ko9kAZ2FE1QvHK1Qj5VcGUPj1G9PUBiArlX5FDAZdD1Q2l3wkg",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/19/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            "19",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "auth-test",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "auth-test",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/?status=ACTIVE",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "auth-test-2",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "auth-test-2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhciOiJFUzI1NiIsImtpZCI6IjhjMzI1ZmNiLWUwNTQtNDg1NC1hYTI3LTI5YTljZDA0YWYwYiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Fyd3JxenpnYWdtZnhqaW9hYW52LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDciLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzgwOTg5MzA2LCJpYXQiOjE3ODA5ODU3MDYsImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoidGVzdDU0N0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiJkNDJmZmRkYy1mMzNjLTRkYjQtOGI4Yi03YzM5NGM5NTAwZDcifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc4MDk4NTcwNn1dLCJzZXNzaW9uX2lkIjoiNzdkMWM4ODktNjc4NC00MTM5LTk0MWQtZDBmN2EzYWM2ZGFiIiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.zkHrdnoowm3kJjdWqMuSyw7JwDAYEGmcigbjV675Xx9bC0xzPsPh6YA4XBqM_98Tp0r5I85wBuaeUR9iIhjaRw",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/foods/?status=ACTIVE",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "foods",
+            ""
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "ACTIVE"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
