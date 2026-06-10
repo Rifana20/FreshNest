@@ -1,110 +1,114 @@
-# FreshNest - Smart Food & Medicine Inventory Assistant
+## 🔐 Authentication
 
-## Overview
-
-FreshNest is a smart inventory management system that helps users organize food and medicine items, track expiry dates, reduce waste, and generate AI-powered recipe suggestions using available ingredients.
-
-The platform encourages better food management by helping users consume items before they expire and monitoring waste patterns.
+- JWT-based authentication using Supabase  
+- Each user sees only their own data  
 
 ---
 
-## Problem
+## 🧪 Testing
 
-Many households forget about food and medicine stored in refrigerators, freezers, pantries, or cabinets. This often leads to expired products, unnecessary waste, and financial loss.
+- Postman collection used for API testing  
 
-FreshNest helps users stay organized, track expiry dates, and make better use of available ingredients through AI-powered recommendations.
+### Verified:
+- CRUD operations  
+- Pagination  
+- Filtering  
+- Authentication  
+- Frontend integration  
 
 ---
 
-## Planned Features
-
-### User Authentication
-
-* Register
-* Login
-* Secure user-specific inventory
-
-### Inventory Management
-
-* Add items
-* Edit items
-* Delete items
-* View inventory
-* Categorize items as:
-
-  * Pantry
-  * Fridge
-  * Freezer
-  * Medicine
-
-### Expiry Tracking
-
-* Fresh items
-* Expiring soon items
-* Expired items
-* Expiry notifications (future enhancement)
-
-### Item Usage Tracking
+## 📊 Item Usage Tracking
 
 Users can mark items as:
 
-* Consumed / Used
-* Wasted / Thrown Away
+- Active  
+- Consumed  
+- Wasted  
 
-This helps monitor food waste and usage habits.
-
-### AI Recipe Suggestions
-
-* Generate recipes from available ingredients
-* Prioritize ingredients nearing expiry
-* Reduce food waste through smart recommendations
-
-### Dashboard Analytics
-
-* Total inventory items
-* Expiring soon items
-* Consumed items
-* Wasted items
-* Waste reduction insights
+This helps analyze food waste patterns.
 
 ---
 
-## Tech Stack
+## 🤖 AI Recipe Suggestions (Planned)
+
+- Generate recipes using available ingredients  
+- Prioritize items nearing expiry  
+- Reduce food waste through smart recommendations  
+
+---
+
+## 📊 Dashboard Analytics
+
+- Total items  
+- Active items  
+- Consumed items  
+- Wasted items  
+- Expiry-based insights  
+
+---
+
+## 🛠 Tech Stack
 
 ### Backend
-
-* Django
-* Django REST Framework
-
-### Database
-
-* Supabase PostgreSQL
-
-### Authentication
-
-* JWT Authentication
-
-### AI
-
-* OpenAI GPT-4o / Claude
-
-### Deployment
-
-* Railway
-
-### Documentation
-
-* Swagger (drf-spectacular)
-* Postman
-
-### Testing
-
-* Pytest
+- Django  
+- Django REST Framework  
+- django-filter  
 
 ---
 
-## Status
+### Database
+- Supabase PostgreSQL  
 
-✔ Feature 1: Completed  
-✔ Feature 2: Completed (CRUD API + Pagination + Filtering + Auth Integration)  
-⏳ Feature 3: In Progress 
+---
+
+### Authentication
+- JWT Authentication (Supabase)  
+
+---
+
+### Frontend
+- React.js  
+
+---
+
+### AI (Planned)
+- OpenAI GPT-4o / Claude  
+
+---
+
+### Deployment
+- Railway (planned)  
+
+---
+
+### Testing & Docs
+- Postman  
+- Pytest (planned)  
+- Swagger (drf-spectacular)  
+
+---
+
+## 🧪 Data Models
+
+### User
+- id
+- username
+- email
+- password
+- created_at
+
+---
+
+### FoodItem
+- id
+- user
+- name
+- quantity
+- category
+- purchase_date
+- expiry_date
+- status
+- created_at
+
+---
