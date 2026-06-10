@@ -27,7 +27,7 @@ FreshNest solves this by providing a smart system to track inventory, expiry dat
 
 ---
 
-## 🚀 Project Status
+##  Project Status
 
 - ✔ Feature 1: Completed (Inventory Management API + Frontend Integration)
 - ✔ Feature 2: Completed (CRUD API + Pagination + Filtering + Authentication Integration)
@@ -35,7 +35,7 @@ FreshNest solves this by providing a smart system to track inventory, expiry dat
 
 ---
 
-## 🚀 Feature 1: Inventory Management (Completed)
+##  Feature 1: Inventory Management (Completed)
 
 Users can:
 - Add items
@@ -51,7 +51,7 @@ Categories:
 
 ---
 
-## 🚀 Feature 2: API Development (Completed)
+##  Feature 2: API Development (Completed)
 
 ### Backend Features
 
@@ -76,7 +76,7 @@ Categories:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 - Postman collection used for API testing  
 
@@ -89,7 +89,7 @@ Categories:
 
 ---
 
-## 📊 Item Usage Tracking
+##  Item Usage Tracking
 
 Users can mark items as:
 
@@ -109,7 +109,7 @@ This helps analyze food waste patterns.
 
 ---
 
-## 📊 Dashboard Analytics
+##  Dashboard Analytics
 
 - Total items  
 - Active items  
@@ -160,7 +160,7 @@ This helps analyze food waste patterns.
 
 ---
 
-## 🧪 Data Models
+##  Data Models
 
 ### User
 
@@ -190,13 +190,23 @@ created_at
 
 ---
 
-## 🚀 API Endpoints
+### 🍲 Food Inventory APIs
 
 ```
-POST   /api/foods/        → Create item
-GET    /api/foods/        → List items (paginated)
-PATCH  /api/foods/{id}/   → Update item
-DELETE /api/foods/{id}/   → Delete item
+POST   /api/foods/          → Create food item
+GET    /api/foods/          → List items (paginated)
+PATCH  /api/foods/{id}/     → Update item (status / details)
+DELETE /api/foods/{id}/     → Delete item
+```
+
+---
+
+### 🔎 Filtering APIs
+
+```
+GET /api/foods/?status=ACTIVE        → Filter by status
+GET /api/foods/?category=FRIDGE      → Filter by category
+GET /api/foods/?category=FRIDGE&status=ACTIVE → Combined filter
 ```
 
 ---
