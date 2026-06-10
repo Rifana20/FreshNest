@@ -190,7 +190,16 @@ created_at
 
 ---
 
-### 🍲 Food Inventory APIs
+##  API Endpoints
+
+### Authentication APIs
+
+```
+POST /api/users/register/   → Register new user
+POST /api/users/login/      → Login user (returns JWT token)
+```
+
+### Food Inventory APIs
 
 ```
 POST   /api/foods/          → Create food item
@@ -201,7 +210,7 @@ DELETE /api/foods/{id}/     → Delete item
 
 ---
 
-### 🔎 Filtering APIs
+###  Filtering APIs
 
 ```
 GET /api/foods/?status=ACTIVE        → Filter by status
