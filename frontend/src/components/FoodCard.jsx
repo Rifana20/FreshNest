@@ -9,15 +9,12 @@ function FoodCard({
   onDelete,
   onUpdate
 }) {
-
   return (
-
     <div className="food-card">
 
       <img
         src={image}
         alt={name}
-        width="120"
       />
 
       <h3>{name}</h3>
@@ -34,24 +31,41 @@ function FoodCard({
         <strong>Status:</strong> {status}
       </p>
 
-      <p>
-        <strong>Expiry Status:</strong> {expiryStatus}
-      </p>
+      <div className="expiry-wrapper">
+        <strong>Expiry Status:</strong>
 
-      <button
-        onClick={() => onUpdate(id)}
-      >
-        Update
-      </button>
+        <span
+          className={
+            expiryStatus === "Fresh"
+              ? "fresh"
+              : expiryStatus === "Expiring Soon"
+              ? "warning"
+              : "expired"
+          }
+        >
+          {expiryStatus}
+        </span>
+      </div>
 
-      <button
-        onClick={() => onDelete(id)}
-      >
-        Delete
-      </button>
+      <div className="food-actions">
+
+        <button
+          className="update-btn"
+          onClick={() => onUpdate(id)}
+        >
+          Update
+        </button>
+
+        <button
+          className="delete-btn"
+          onClick={() => onDelete(id)}
+        >
+          Delete
+        </button>
+
+      </div>
 
     </div>
-
   );
 }
 

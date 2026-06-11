@@ -53,11 +53,13 @@ function AddFoodModal({ onFoodAdded }) {
     }
   };
 
-  return (
+return (
 
-    <div className="add-food-form">
+  <div className="add-food-form">
 
-      <h2>Add Item</h2>
+    <h2>Add Item</h2>
+
+    <div className="form-row">
 
       <input
         placeholder="Item Name"
@@ -68,12 +70,16 @@ function AddFoodModal({ onFoodAdded }) {
       />
 
       <input
-        placeholder="Quantity (eg: 2kg)"
+        placeholder="Quantity"
         value={quantity}
         onChange={(e) =>
           setQuantity(e.target.value)
         }
       />
+
+    </div>
+
+    <div className="form-row">
 
       <select
         value={category}
@@ -81,57 +87,51 @@ function AddFoodModal({ onFoodAdded }) {
           setCategory(e.target.value)
         }
       >
-        <option value="PANTRY">
-          Pantry
-        </option>
-
-        <option value="FRIDGE">
-          Fridge
-        </option>
-
-        <option value="FREEZER">
-          Freezer
-        </option>
-
-        <option value="MEDICINE">
-          Medicine
-        </option>
-
+        <option value="PANTRY">Pantry</option>
+        <option value="FRIDGE">Fridge</option>
+        <option value="FREEZER">Freezer</option>
+        <option value="MEDICINE">Medicine</option>
       </select>
-
-      <label>
-        Purchase Date
-      </label>
-
-      <input
-        type="date"
-        value={purchaseDate}
-        onChange={(e) =>
-          setPurchaseDate(e.target.value)
-        }
-      />
-
-      <label>
-        Expiry Date
-      </label>
-
-      <input
-        type="date"
-        value={expiryDate}
-        onChange={(e) =>
-          setExpiryDate(e.target.value)
-        }
-      />
-
-      <button
-        onClick={handleSubmit}
-      >
-        Add Item
-      </button>
 
     </div>
 
-  );
-}
+    <div className="form-row">
 
+      <div>
+        <label>Purchase Date</label>
+
+        <input
+          type="date"
+          value={purchaseDate}
+          onChange={(e) =>
+            setPurchaseDate(e.target.value)
+          }
+        />
+      </div>
+
+      <div>
+        <label>Expiry Date</label>
+
+        <input
+          type="date"
+          value={expiryDate}
+          onChange={(e) =>
+            setExpiryDate(e.target.value)
+          }
+        />
+      </div>
+
+    </div>
+
+    <button
+      className="add-btn"
+      onClick={handleSubmit}
+    >
+      Add Item
+    </button>
+
+  </div>
+
+);
+}
 export default AddFoodModal;

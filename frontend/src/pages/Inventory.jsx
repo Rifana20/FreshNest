@@ -159,80 +159,158 @@ const handleUpdate = async (id) => {
 
   }
 };
-  return (
-    <>
-      <Navbar />
+ return (
+  <>
+    <Navbar />
 
-      <div className="page-container">
+    <div className="page-container">
 
-        <div className="inventory-header">
+      <div className="inventory-header">
 
-          <h1>Food Inventory</h1>
+  <div className="inventory-title">
 
-          <AddFoodModal
-            onFoodAdded={loadFoods}
-          />
+    <div>
+      <h1>FreshNest Inventory Dashboard</h1>
 
-        </div>
+      <p>
+        View, organize, and manage food and medicine items
+        while monitoring expiry status in real time.
+      </p>
+    </div>
 
-        <div className="categories">
+    <div className="food-animation">
+      <span className="emoji e1">🍎</span>
+      <span className="emoji e2">🥛</span>
+      <span className="emoji e3">🍞</span>
+      <span className="emoji e4">🥚</span>
+      <span className="emoji e5">🍌</span>
+    </div>
 
-          <button
-            onClick={() => setSelectedCategory("All")}
-          >
-            All
-          </button>
+  </div>
 
-          <button
-            onClick={() => setSelectedCategory("PANTRY")}
-          >
-            Pantry
-          </button>
-
-          <button
-            onClick={() => setSelectedCategory("FRIDGE")}
-          >
-            Fridge
-          </button>
-
-          <button
-            onClick={() => setSelectedCategory("FREEZER")}
-          >
-            Freezer
-          </button>
-
-          <button
-            onClick={() => setSelectedCategory("MEDICINE")}
-          >
-            Medicine
-          </button>
-
-        </div>
-
-        <div className="food-grid">
-
-          {filteredFoods.map((food) => (
-
-  <FoodCard
-    key={food.id}
-    id={food.id}
-    image={getImage(food.name)}
-    name={food.name}
-    category={food.category}
-    expiry={food.expiry_date}
-    status={food.status}
-    expiryStatus={food.expiry_status}
-    onDelete={handleDelete}
-    onUpdate={handleUpdate}
+  <AddFoodModal
+    onFoodAdded={loadFoods}
   />
 
-))}
+</div>
+        
 
+      <div className="inventory-summary">
+
+        <div className="summary-card">
+          <h2>{foods.length}</h2>
+          <p>Total Items</p>
+        </div>
+
+        <div className="summary-card">
+          <h2>
+            {
+              foods.filter(
+                item =>
+                  item.expiry_status === "Expired"
+              ).length
+            }
+          </h2>
+          <p>Expired</p>
+        </div>
+
+        <div className="summary-card">
+          <h2>
+            {
+              foods.filter(
+                item =>
+                  item.expiry_status === "Expiring Soon"
+              ).length
+            }
+          </h2>
+          <p>Expiring Soon</p>
         </div>
 
       </div>
-    </>
-  );
+
+      <div className="categories">
+
+        <button
+          className={
+            selectedCategory === "All"
+              ? "active"
+              : ""
+          }
+          onClick={() => setSelectedCategory("All")}
+        >
+          All
+        </button>
+
+        <button
+          className={
+            selectedCategory === "PANTRY"
+              ? "active"
+              : ""
+          }
+          onClick={() => setSelectedCategory("PANTRY")}
+        >
+          Pantry
+        </button>
+
+        <button
+          className={
+            selectedCategory === "FRIDGE"
+              ? "active"
+              : ""
+          }
+          onClick={() => setSelectedCategory("FRIDGE")}
+        >
+          Fridge
+        </button>
+
+        <button
+          className={
+            selectedCategory === "FREEZER"
+              ? "active"
+              : ""
+          }
+          onClick={() => setSelectedCategory("FREEZER")}
+        >
+          Freezer
+        </button>
+
+        <button
+          className={
+            selectedCategory === "MEDICINE"
+              ? "active"
+              : ""
+          }
+          onClick={() => setSelectedCategory("MEDICINE")}
+        >
+          Medicine
+        </button>
+
+      </div>
+
+      <div className="food-grid">
+
+        {filteredFoods.map((food) => (
+
+          <FoodCard
+            key={food.id}
+            id={food.id}
+            image={getImage(food.name)}
+            name={food.name}
+            category={food.category}
+            expiry={food.expiry_date}
+            status={food.status}
+            expiryStatus={food.expiry_status}
+            onDelete={handleDelete}
+            onUpdate={handleUpdate}
+          />
+
+        ))}
+
+      </div>
+
+    </div>
+  </>
+);
 }
 
 export default Inventory;

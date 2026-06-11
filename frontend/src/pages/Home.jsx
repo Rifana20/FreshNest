@@ -8,45 +8,58 @@ function Home() {
 
       <div className="hero">
 
-        <div className="hero-left">
-          <h1>Reduce Food Waste Smarter</h1>
+  <div className="hero-left">
 
-          <p>
-            Track food expiry dates, manage your inventory,
-            and generate AI-powered recipes from ingredients
-            already available at home.
-          </p>
+    <span className="hero-badge">
+      🌱 Smart Food Management
+    </span>
 
-          <div className="hero-buttons">
-            <button className="primary-btn">
-              Get Started
-            </button>
+    <h1>
+      Reduce Food Waste
+      <span> Smarter</span>
+    </h1>
 
-            <button className="secondary-btn">
-              View Inventory
-            </button>
-          </div>
-        </div>
+    <p>
+      Track expiry dates, organize food and medicine,
+      and generate AI-powered recipes using ingredients
+      already available at home.
+    </p>
 
-        <div className="hero-right">
+    <div className="hero-buttons">
 
-          <div className="floating-card egg">
-            🥚 Eggs
-            <span>2 days left</span>
-          </div>
+      <button className="primary-btn">
+        Get Started
+      </button>
 
-          <div className="floating-card milk">
-            🥛 Milk
-            <span>Expires Tomorrow</span>
-          </div>
+      <button className="secondary-btn">
+        View Inventory
+      </button>
 
-          <div className="floating-card bread">
-            🍞 Bread
-            <span>Fresh</span>
-          </div>
+    </div>
 
-        </div>
+  </div>
 
+  <div className="hero-right">
+
+    <div className="floating-card egg">
+      🥚 Eggs
+      <span>2 days left</span>
+    </div>
+
+    <div className="floating-card milk">
+      🥛 Milk
+      <span>Expires Tomorrow</span>
+    </div>
+
+    <div className="floating-card bread">
+      🍞 Bread
+      <span>Fresh</span>
+    </div>
+
+  </div>
+
+
+  
       </div>
 
       <section className="features">
@@ -83,24 +96,27 @@ function Home() {
 
       </section>
 
-      <section className="stats">
+     <section className="home-stats">
 
-        <div className="stat">
-          <h2>500+</h2>
-          <p>Items Managed</p>
-        </div>
+  <div className="home-stat-card">
+    <div className="stat-icon">📦</div>
+    <h2>500+</h2>
+    <p>Items Managed</p>
+  </div>
 
-        <div className="stat">
-          <h2>120+</h2>
-          <p>Recipes Generated</p>
-        </div>
+  <div className="home-stat-card">
+    <div className="stat-icon">🍳</div>
+    <h2>120+</h2>
+    <p>Recipes Generated</p>
+  </div>
 
-        <div className="stat">
-          <h2>40%</h2>
-          <p>Food Waste Reduced</p>
-        </div>
+  <div className="home-stat-card">
+    <div className="stat-icon">🌱</div>
+    <h2>40%</h2>
+    <p>Food Waste Reduced</p>
+  </div>
 
-      </section>
+</section>
 
       <Footer />
     </>

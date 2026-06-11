@@ -47,7 +47,16 @@ function Dashboard() {
 
       <div className="page-container">
 
-        <h1>FreshNest Dashboard</h1>
+        <div className="dashboard-header">
+
+  <h1>FreshNest Dashboard</h1>
+
+  <p>
+    Track inventory, usage patterns
+    and food waste.
+  </p>
+
+</div>
 
         <div className="stats-container">
 
@@ -72,7 +81,30 @@ function Dashboard() {
           />
 
         </div>
+<div className="dashboard-section">
 
+  <h2>Inventory Summary</h2>
+
+  <div className="summary-card">
+
+    <p>
+      Active Items:
+      <strong> {freshItems}</strong>
+    </p>
+
+    <p>
+      Consumed Items:
+      <strong> {consumedItems}</strong>
+    </p>
+
+    <p>
+      Wasted Items:
+      <strong> {wastedItems}</strong>
+    </p>
+
+  </div>
+
+</div>
       </div>
     </>
   );
