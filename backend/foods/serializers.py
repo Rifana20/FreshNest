@@ -21,7 +21,4 @@ class FoodItemSerializer(serializers.ModelSerializer):
             "expiry_status"
         ]
 
-        read_only_fields = [
-            "user",
-            "expiry_status"
-        ]
+        read_only_fields = ["user"]

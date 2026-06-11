@@ -1,3 +1,4 @@
+[![Django Tests](https://github.com/Rifana20/FreshNest/actions/workflows/django.yml/badge.svg)](https://github.com/Rifana20/FreshNest/actions/workflows/django.yml)
 # FreshNest - Smart Food & Medicine Inventory Assistant
 
 ## Overview
