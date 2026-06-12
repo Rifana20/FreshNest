@@ -179,5 +179,6 @@ SUPABASE_JWT_SECRET = env(
     default="test-secret"
 )
 SUPABASE_JWKS_URL = env(
-    "SUPABASE_JWKS_URL"
+    "SUPABASE_JWKS_URL",
+    default=""
 )
