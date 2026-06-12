@@ -16,27 +16,23 @@ class FoodViewSet(viewsets.ModelViewSet):
             user=self.request.user
         )
 
-        category = self.request.query_params.get(
-            "category"
-        )
-
-        status = self.request.query_params.get(
-            "status"
-        )
+        category = self.request.query_params.get("category")
+        status = self.request.query_params.get("status")
 
         if category:
             queryset = queryset.filter(
-                category=category
+                category__iexact=category
             )
 
         if status:
             queryset = queryset.filter(
-                status=status
+                status__iexact=status
             )
 
         return queryset
 
     def perform_create(self, serializer):
+
         serializer.save(
             user=self.request.user
         )

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import date
+from django.utils import timezone
 
 
 class FoodItem(models.Model):
@@ -48,7 +48,7 @@ class FoodItem(models.Model):
 
     @property
     def expiry_status(self):
-        today = date.today()
+        today = timezone.now().date()
 
         if self.expiry_date < today:
             return "Expired"

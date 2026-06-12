@@ -19,7 +19,7 @@ function Dashboard() {
       }
     })
       .then((res) => {
-        setFoods(res.data.results);
+        setFoods(res.data.results || res.data);
       });
 
   }, []);

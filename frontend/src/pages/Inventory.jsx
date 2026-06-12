@@ -34,7 +34,7 @@ function Inventory() {
     })
       .then((response) => {
 
-        setFoods(response.data.results);
+        setFoods(response.data.results || response.data);
 
       })
       .catch((error) => {

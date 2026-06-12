@@ -75,13 +75,13 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "foods.authentication.SupabaseJWTAuthentication",
     ],
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.AllowAny",
-    ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
     "DEFAULT_FILTER_BACKENDS": [
         "django_filters.rest_framework.DjangoFilterBackend"
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
     ],
 }
 
@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 import sys
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 if "pytest" in sys.modules:
     DATABASES = {
@@ -173,3 +173,8 @@ SUPABASE_URL = env("SUPABASE_URL")
 SUPABASE_KEY = env("SUPABASE_KEY")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SUPABASE_JWT_SECRET = env("SUPABASE_JWT_SECRET")
+SUPABASE_JWKS_URL = env(
+    "SUPABASE_JWKS_URL"
+)
