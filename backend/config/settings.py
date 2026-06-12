@@ -174,7 +174,10 @@ SUPABASE_KEY = env("SUPABASE_KEY")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SUPABASE_JWT_SECRET = env("SUPABASE_JWT_SECRET")
+SUPABASE_JWT_SECRET = env(
+    "SUPABASE_JWT_SECRET",
+    default="test-secret"
+)
 SUPABASE_JWKS_URL = env(
     "SUPABASE_JWKS_URL"
 )
